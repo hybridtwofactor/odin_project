@@ -31,7 +31,7 @@ a {
     color: white;
 }
 
-.first {
+.welcome {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@ a {
     min-height: auto;
 }
 
-.welcome_content {
+.welcome-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -49,12 +49,12 @@ a {
     max-width: 950px;
 }
 
-.welcome_text { /** "this website is awesome" **/
+.welcome-text { /** "this website is awesome" **/
     color: #f9faf8;
     flex: 1;
 }
 
-.main_text {
+.main-text {
     font-size: 48px;
     font-weight: bolder;
     color: #f9faf8;
@@ -71,7 +71,7 @@ button {
     font-weight: bold;
 }
 
-.astronaut_image {
+.welcome-images {
     display: flex;
     min-height: 0;
     height: 200px;
@@ -86,7 +86,7 @@ img {
     max-height: 100%;
 }
 
-.second {
+.random-information {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,7 +101,7 @@ img {
     text-align: center;
 }
 
-.infoWindows {
+.information-windows {
     display: flex;
     justify-content: center;
     gap: 48px;
@@ -109,25 +109,25 @@ img {
     max-width: 950px;
 }
 
-.infoBox {
+.information-box {
     width: 200px;
     text-align: center;
 }
 
-.infoBox img {
+.information-box img {
     border-style: solid;
     border-color: #949c9a;
     border-radius: 16px;
 }
 
-.third {
+.quote-section {
     display: flex;
     background-color: #d4d4dc;
     justify-content: center;
     padding: 72px 8px 72px 8px;
 }
 
-.quoteBox {
+.quote-Box {
     display: flex;
     flex-direction: column;
     max-width: 950px;
