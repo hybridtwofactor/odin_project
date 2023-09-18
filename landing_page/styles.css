@@ -5,6 +5,7 @@ body {
     font-size: 18px;
 }
 
+/* header section - navigation bar and welcome section*/
 .header {
     display: flex;
     flex-direction: column;
@@ -14,6 +15,7 @@ body {
     min-height: auto;
 }
 
+/*navigation bar - logo and navigation links*/
 .navbar {
     display: flex;
     color: white;
@@ -41,6 +43,7 @@ a {
     color: white;
 }
 
+/*welcome section - text and images*/
 .welcome-content {
     display: flex;
     flex-wrap: wrap;
@@ -64,7 +67,7 @@ a {
 
 button {
     margin: 16px 0px 8px 0px;
-    background-color: #949c9a;
+    background-color: #66a393;
     padding: 6px 28px 6px 28px;
     border: none;
     border-radius: 6px;
@@ -87,6 +90,7 @@ img {
     max-height: 100%;
 }
 
+/*random information section*/
 .random-information {
     display: flex;
     flex-direction: column;
@@ -121,6 +125,7 @@ img {
     border-radius: 16px;
 }
 
+/* quote section */
 .quote-section {
     display: flex;
     background-color: #d4d4dc;
@@ -133,6 +138,7 @@ img {
     flex-direction: column;
     max-width: 950px;
 }
+
 .quote {
     font-size: 36px;
     color: #040404;
@@ -147,6 +153,7 @@ img {
     margin: 16px;
 }
 
+/* footer - copyright warning */
 .footer {
     display: flex;
     justify-content: center;
