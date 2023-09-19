@@ -1,0 +1,28 @@
+Goal
+-------------------
+Simple implementation of classic "rock paper scissors"
+
+Plan
+-------------------
+- play against the computer
+- functions
+    - getComputerChoice
+        - randomly return "Rock", "Paper" or "Scissors"
+        - use this function to get computer to play
+    - round --> parameters: playerSelection, computerSelection
+        - return a string that declares the winner of the round
+            - "You Lose! Paper beats Rock"
+    - game
+        - play 5 round game
+        - keeps score
+        - reports winner and loser at the end
+        - use console.log() to display results of each round and winner
+        - prompt to get input from user
+- make function's playerSelection case-insensitive (e.g. user can input rock, ROCK, RocK)
+
+Pseudocode
+--------------------
+getComputerChoice():
+randomise a choice from "rock", "paper" or "scissors"
+return choice
+
