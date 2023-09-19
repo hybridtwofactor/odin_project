@@ -26,3 +26,20 @@ getComputerChoice():
 randomise a choice from "rock", "paper" or "scissors"
 return choice
 
+round(playerSelection, computerSelection):
+lowercase playerSelection variable
+if playerSelection equals to computerSelection
+    return tie
+else if playerSelection equals scissors, computer selection equals paper
+    return winner is player
+else if playerSelection equals scissors, computer selection equals rock
+    return winner is computer
+else if playerSelection equals paper, computer selection equals rock
+    return winner is player
+else if playerSelection equals paper, computer selection equals scissors
+    return winner is computer
+else if playerSelection equals rock, computer selection equals scissors
+    return winner is player
+else if playerSelection equals rock, computer selection equals paper
+    return winner is computer
+return string to declare winner - "You Lose! Paper beats Rock"
