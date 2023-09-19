@@ -43,3 +43,23 @@ else if playerSelection equals rock, computer selection equals scissors
 else if playerSelection equals rock, computer selection equals paper
     return winner is computer
 return string to declare winner - "You Lose! Paper beats Rock"
+
+game():
+    variable playerScore
+    variable computerScore
+    prompt user to input selection
+    play five games
+        call round(playerSelection, getComputerChoice()) function
+        if round winner is player 
+            increment playerScore
+        else if round winner is computer
+            increment commputerScore
+        else
+            tie
+    if playerScore greater than computerScore
+        declare player wins
+    else if computerScore greater than playerScore
+        declare computer wins
+    else
+        tie
+    
