@@ -33,33 +33,3 @@ function round(playerSelection, computerSelection) {
         return "computer"
     }
 }
-
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    let roundResult;
-
-    for (i = 0; i < 5; i++) {
-        let playerSelection = prompt("What's your selection? rock, paper or scissors?")
-        roundResult = round(playerSelection, getComputerChoice());
-        if (roundResult === "player") {
-            playerScore++;
-        } else if (roundResult === "computer") {
-            computerScore++;
-        }
-    }
-
-    if (playerScore > computerScore) {
-        console.log("Player wins!");
-    } else if (computerScore > playerScore) {
-        console.log("Player wins!");
-    } else if (computerScore === playerScore) {
-        console.log("Tie!");
-    } 
-    console.log(`Player score is ${playerScore}`);
-    console.log(`Computer score is ${computerScore}`);
-}
-
-
-console.log("test game() function");
-game();
