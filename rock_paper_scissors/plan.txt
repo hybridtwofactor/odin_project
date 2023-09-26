@@ -44,6 +44,7 @@ else if playerSelection equals rock, computer selection equals paper
     return winner is computer
 return string to declare winner - "You Lose! Paper beats Rock"
 
+code removed to make ui implementation:
 game():
     variable playerScore
     variable computerScore
@@ -89,3 +90,18 @@ function game() {
     console.log(`Player score is ${playerScore}`);
     console.log(`Computer score is ${computerScore}`);
 }
+
+
+Goal
+-------------------
+Simple user interface implementation of classic "rock paper scissors"
+
+Plan
+-------------------
+- rework code to attach event listeners to the buttons - calls playRound()
+- hold player's and computer's selection for a few seconds
+- show computer's selection 0.07s after player for user's smooth eye movement
+    so they know what's happening
+- display score on the scoreboard
+- announce win, tie or loss, keep log
+
