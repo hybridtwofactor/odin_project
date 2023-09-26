@@ -39,10 +39,15 @@ h1 {
     flex-direction: column;
 }
 
-.playerHeading {
+.playerHeading,
+.computerHeading {
     text-align: center;
     font-size: x-large;
     padding: 8px;
+}
+
+.winnerHeadingStyle {
+    color: #d8b207;
 }
 
 .rpsButtons {
@@ -74,7 +79,8 @@ h1 {
     cursor: pointer;
 }
 
-.selectableButton:hover {
+.selectableButton:hover,
+.endGameSelection {
     background-color: #9aba95;
     box-shadow: 0 8px 8px 0 #323e2a, 0 4px 12px 0 #9aba95;
 }
@@ -109,6 +115,8 @@ button img {
     color: #323e2a;
     background-color: #9aba95;
     border-radius: 15px;
-    margin: 0px 60px 0px 60px;
+    align-items: center;
+    max-width: 600px;
+    margin: 0px auto;
     padding: 16px;
 }
