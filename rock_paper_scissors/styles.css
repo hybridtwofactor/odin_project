@@ -1,3 +1,9 @@
+.centerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 html {
     background-color: #fff4aa;
 }
@@ -62,8 +68,10 @@ h1 {
     min-height: 150px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    cursor: pointer;
+}
 
+.selectableButton {
+    cursor: pointer;
 }
 
 .selectableButton:hover {
@@ -82,4 +90,25 @@ button img {
     object-fit: contain;
     width: 100%;
     pointer-events: none;
+}
+
+.reset {
+    background-color: #d5e9e8;
+    border-style: none;
+    border-radius: 15px;
+    margin: 8px;
+    padding: 8px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.log {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #323e2a;
+    background-color: #9aba95;
+    border-radius: 15px;
+    margin: 0px 60px 0px 60px;
+    padding: 16px;
 }
