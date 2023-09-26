@@ -5,13 +5,21 @@ function getComputerChoice() {
     return shapes[random];
 }
 
-function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
+function addToLog(roundResult) {
+    const log = document.querySelector(".log");
+    const content = document.createElement("p");
+    content.textContent = roundResult;
+    log.appendChild(content);
+}
+
+function playRound(e) {
+    playerSelection = e.target.id;
+    computerSelection = getComputerChoice();
     
     // when both tie
     if (playerSelection === computerSelection) {
         console.log(`It's a tie! Both played ${playerSelection}`)
-        return "tie";
+        addToLog("tie")
     }
     
     // when player wins
@@ -20,7 +28,7 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === "rock" && computerSelection === "scissors")) {
         playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
         console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
-        return "player";
+        addToLog("player")
     }
     
     // when computer wins
@@ -30,6 +38,16 @@ function playRound(playerSelection, computerSelection) {
         computerSelection = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
         roundWinner = "computer";
         console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
-        return "computer"
+        addToLog("computer")
     }
 }
+
+//testing
+const rockBtn = document.querySelector("#rock");
+console.log(rockBtn);
+
+const selections = document.querySelectorAll(".selectableButton");
+console.log(selections);
+selections.forEach(selectableButton => selectableButton.addEventListener("click", playRound))
+
+const log = document.querySelector(".log");

@@ -2,7 +2,7 @@
 <html lang="en-nz">
     <head>
         <meta charset="utf-8">
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
         <link rel="stylesheet" href="styles.css">
         <title>Rock Paper Scissors</title>
     </head>
@@ -11,24 +11,26 @@
         <h1>Rock Paper Scissors</h1>
         <div class="rules">First to five wins.</div>
         <div class="game">
-            <div class="playerScoreArea">
+            <div class="playArea">
                 <div class="playerHeading">You</div>
                 <div class="rpsButtons">
-                    <button class="selectableButton"><div class="caption">Rock</div><img src="rock-OpenClipart-Vectors-Pixabay.png"/></button>
-                    <button class="selectableButton"><div class="caption">Paper</div><img src="paper-ki-kieh-Pixabay.png"/></button>
-                    <button class="selectableButton"><div class="caption">Scissors</div><img src="scissors-MarkBaird-Pixabay.png"/></button>
+                    <button id="rock" class="selection selectableButton"><div class="caption">Rock</div><img src="rock-OpenClipart-Vectors-Pixabay.png"/></button>
+                    <button id="paper" class="selection selectableButton"><div class="caption">Paper</div><img src="paper-ki-kieh-Pixabay.png"/></button>
+                    <button id="scissors" class="selection selectableButton"><div class="caption">Scissors</div><img src="scissors-MarkBaird-Pixabay.png"/></button>
                 </div>
             </div>
-            <div class="scoreBoard"><div class="playerScore"></div>-<div class="playerScore"></div></div>
-            <div class="playerScoreArea">
+            <div class="scoreBoard"><div class="score"></div>-<div class="score"></div></div>
+            <div class="playArea">
                 <div class="playerHeading">Computer</div>
                 <div class="rpsButtons">
-                    <button><div class="caption">Rock</div><img src="rock-OpenClipart-Vectors-Pixabay.png"/></button>
-                    <button><div class="caption">Paper</div><img src="paper-ki-kieh-Pixabay.png"/></button>
-                    <button><div class="caption">Scissors</div><img src="scissors-MarkBaird-Pixabay.png"/></button>
+                    <button class="selection"><div class="caption">Rock</div><img src="rock-OpenClipart-Vectors-Pixabay.png"/></button>
+                    <button class="selection"><div class="caption">Paper</div><img src="paper-ki-kieh-Pixabay.png"/></button>
+                    <button class="selection"><div class="caption">Scissors</div><img src="scissors-MarkBaird-Pixabay.png"/></button>
                 </div>
             </div>
         </div>
+        <div class="log"></div>
+        <button class="reset">Reset</button>
     </body>
 
     

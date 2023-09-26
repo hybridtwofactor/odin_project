@@ -28,7 +28,7 @@ h1 {
     padding: 36px 8px 36px 8px;
 }
 
-.scoreArea {
+.playArea {
     display: flex;
     flex-direction: column;
 }
@@ -52,7 +52,7 @@ h1 {
     width: 72px;
 }
 
-button {
+.selection {
     display: flex;
     flex-direction: column;
     background-color: #d5f3d1;
@@ -63,6 +63,7 @@ button {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
+
 }
 
 .selectableButton:hover {
@@ -80,4 +81,5 @@ button img {
     flex: 1;
     object-fit: contain;
     width: 100%;
+    pointer-events: none;
 }
