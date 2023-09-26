@@ -5,7 +5,7 @@ function getComputerChoice() {
     return shapes[random];
 }
 
-function round(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     
     // when both tie
