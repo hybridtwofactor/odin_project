@@ -1,6 +1,47 @@
+html {
+    background-color: #fff4aa;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #323e2a;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #677842;
+    font-size: xxx-large;
+}
+
+.rules{
+    font-size: x-large;
+    text-align: center;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+    padding: 36px 8px 36px 8px;
+}
+
+.playerScoreArea {
+    display: flex;
+    flex-direction: column;
+}
+
+.playerHeading {
+    text-align: center;
+    font-size: x-large;
+    padding: 8px;
+}
+
 .rpsButtons {
     display: flex;
-    gap: 4px;
+    gap: 8px;
 }
 
 button {
@@ -9,12 +50,18 @@ button {
     background-color: #d5f3d1;
     border-radius: 15px;
     border-style: none;
-    max-width: 100px;
+    max-width: 120px;
     min-height: 150px;
 }
 
 button:hover {
     background-color: #9aba95;
+}
+
+.caption {
+    color: #323e2a;
+    font-size: medium;
+    padding: 4px;
 }
 
 button img {
