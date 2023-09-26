@@ -9,6 +9,8 @@ function addToLog(roundResult) {
     const log = document.querySelector(".log");
     const content = document.createElement("p");
     content.textContent = roundResult;
+    content.style.fontSize = "16px";
+    content.style.fontWeight = "normal";
     log.appendChild(content);
 }
 
@@ -26,19 +28,19 @@ function playRound(e) {
     if ((playerSelection === "scissors" && computerSelection === "paper") ||
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "rock" && computerSelection === "scissors")) {
+        addToLog(`You Win! ${playerSelection} > ${computerSelection}`)
         playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
         console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
-        addToLog("player")
     }
     
     // when computer wins
     if ((computerSelection === "scissors" && playerSelection === "paper") ||
     (computerSelection === "paper" && playerSelection === "rock") ||
     (computerSelection === "rock" && playerSelection === "scissors")) {
+        addToLog(`You Win! ${playerSelection} < ${computerSelection}`)
         computerSelection = computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1);
         roundWinner = "computer";
         console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
-        addToLog("computer")
     }
 }
 
