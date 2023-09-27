@@ -5,9 +5,9 @@ let computerSelection;
 let roundWinner;
 
 function getComputerChoice() {
-    const shapes = ["rock", "paper", "scissors"];
-    let random = Math.floor(Math.random() * shapes.length);
-    return shapes[random];
+    const selection = ["rock", "paper", "scissors"];
+    let random = Math.floor(Math.random() * selection.length);
+    return selection[random];
 }
 
 function addToLog(roundLog) {
@@ -20,18 +20,17 @@ function addToLog(roundLog) {
 }
 
 function notifyConsole() {
-    consoleRoundWinner = roundWinner.charAt(0).toUpperCase() + roundWinner.slice(1);
-    if (roundWinner === "Player") {
-        console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
-    } else if (roundWinner === "Computer") {
-        console.log(`You Lose! ${playerSelection} loses to ${computerSelection}`);
+    firstLetterCapital = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
+    if (roundWinner === "player") {
+        console.log(`You Win! ${firstLetterCapital} beats ${computerSelection}`);
+    } else if (roundWinner === "computer") {
+        console.log(`You Lose! ${firstLetterCapital} loses to ${computerSelection}`);
     } else {
         console.log(`It's a tie! Both played ${playerSelection}`)
     }
 }
 
 function updateScoreBoard() {
-    console.log(roundWinner);
     const playerScoreboard = document.querySelector(".playerScore");
     const computerScoreboard = document.querySelector(".computerScore");
 
@@ -50,28 +49,31 @@ function endGame() {
     if (roundWinner === "player") {
         playerButtonSelection.forEach((selectableButton) => selectableButton.classList.add('endGameSelection'));
         const winnerHeading = document.querySelector(".playerHeading");
+        winnerHeading.style.color = "#d8b207";
         winnerHeading.textContent = "Player Wins!";
-        winnerHeading.classList.add(".winnerHeadingStyle");
-        console.log(playerButtonSelection);
     } else {
         computerButtonSelection.forEach((nonSelectableButton) => nonSelectableButton.classList.add('endGameSelection'));
         const winnerHeading = document.querySelector(".computerHeading");
+        winnerHeading.style.color = "#d8b207";
         winnerHeading.textContent = "Computer Wins!";
-        winnerHeading.classList.add(".winnerHeadingStyle");
-        console.log(computerButtonSelection);
     }
     playerButtonSelection.forEach((selectableButton) => selectableButton.style.pointerEvents = "none");
 }
 
-
 function playRound(e) {
     playerSelection = e.target.id;
     computerSelection = getComputerChoice();
+    document.querySelector("#computer-" + computerSelection).classList.add("computerSelection");
+    setTimeout(() => {
+        const computerButtons = document.querySelectorAll(".nonSelectableButton")
+        computerButtons.forEach((nonSelectableButton) => nonSelectableButton.classList.remove("computerSelection"));
+    }, 300)
+
     
     // when both tie
     if (playerSelection === computerSelection) {
         roundWinner = "tie";
-        addToLog("tie")
+        addToLog(`Tie! ${playerSelection} = ${computerSelection}`)
         notifyConsole();
     }
     
@@ -101,14 +103,8 @@ function playRound(e) {
     }
 }
 
-//testing
-const rockBtn = document.querySelector("#rock");
-console.log(rockBtn);
-
 const selections = document.querySelectorAll(".selectableButton");
-console.log(selections);
 selections.forEach(selectableButton => selectableButton.addEventListener("click", playRound))
 
-const reset = document.querySelector(".reset");
-reset.addEventListener("click", resetGame());
+
 
