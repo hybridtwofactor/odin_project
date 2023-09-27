@@ -19,17 +19,6 @@ function addToLog(roundLog) {
     log.appendChild(content);
 }
 
-function notifyConsole() {
-    firstLetterCapital = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1);
-    if (roundWinner === "player") {
-        console.log(`You Win! ${firstLetterCapital} beats ${computerSelection}`);
-    } else if (roundWinner === "computer") {
-        console.log(`You Lose! ${firstLetterCapital} loses to ${computerSelection}`);
-    } else {
-        console.log(`It's a tie! Both played ${playerSelection}`)
-    }
-}
-
 function updateScoreBoard() {
     const playerScoreboard = document.querySelector(".playerScore");
     const computerScoreboard = document.querySelector(".computerScore");
@@ -74,7 +63,6 @@ function playRound(e) {
     if (playerSelection === computerSelection) {
         roundWinner = "tie";
         addToLog(`Tie! ${playerSelection} = ${computerSelection}`)
-        notifyConsole();
     }
     
     // when player wins
@@ -83,7 +71,6 @@ function playRound(e) {
     (playerSelection === "rock" && computerSelection === "scissors")) {
         roundWinner = "player";
         addToLog(`You Win! ${playerSelection} > ${computerSelection}`);
-        notifyConsole();
     }
     
     // when computer wins
@@ -92,7 +79,6 @@ function playRound(e) {
     (computerSelection === "rock" && playerSelection === "scissors")) {
         roundWinner = "computer";
         addToLog(`You Lose! ${playerSelection} < ${computerSelection}`)
-        notifyConsole();
     }
 
     updateScoreBoard();

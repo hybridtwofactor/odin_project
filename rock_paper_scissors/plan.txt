@@ -44,54 +44,6 @@ else if playerSelection equals rock, computer selection equals paper
     return winner is computer
 return string to declare winner - "You Lose! Paper beats Rock"
 
-code removed to make ui implementation:
-game():
-    variable playerScore
-    variable computerScore
-    prompt user to input selection
-    play five games
-        call round(playerSelection, getComputerChoice()) function
-        if round winner is player 
-            increment playerScore
-        else if round winner is computer
-            increment commputerScore
-        else
-            tie
-    if playerScore greater than computerScore
-        declare player wins
-    else if computerScore greater than playerScore
-        declare computer wins
-    else
-        tie
-    
-
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    let roundResult;
-
-    for (i = 0; i < 5; i++) {
-        let playerSelection = prompt("What's your selection? rock, paper or scissors?")
-        roundResult = round(playerSelection, getComputerChoice());
-        if (roundResult === "player") {
-            playerScore++;
-        } else if (roundResult === "computer") {
-            computerScore++;
-        }
-    }
-
-    if (playerScore > computerScore) {
-        console.log("Player wins!");
-    } else if (computerScore > playerScore) {
-        console.log("Player wins!");
-    } else if (computerScore === playerScore) {
-        console.log("Tie!");
-    } 
-    console.log(`Player score is ${playerScore}`);
-    console.log(`Computer score is ${computerScore}`);
-}
-
-
 Goal
 -------------------
 Simple user interface implementation of classic "rock paper scissors"
